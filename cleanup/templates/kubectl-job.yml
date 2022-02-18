@@ -1,0 +1,12 @@
+apiVersion: batch/v1
+kind: Job
+metadata:
+  name: cleanup
+spec:
+      template:
+        spec:
+          containers:
+          - name: kubectl-runner
+            image: wernight/kubectl
+            command: ["sh", "-c", "kubectl get clusterrole"]
+          restartPolicy: Never
