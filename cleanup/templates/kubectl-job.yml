@@ -7,7 +7,7 @@ spec:
       template:
         spec:
           serviceAccountName: helm-traefik
-          automountServiceAccountToken: false
+          automountServiceAccountToken: true
           containers:
           - name: kubectl-runner
             image: wernight/kubectl
