@@ -11,5 +11,5 @@ spec:
           containers:
           - name: kubectl-runner
             image: wernight/kubectl
-            command: ["sh", "-c", "kubectl get clusterrole"]
+            command: ["sh", "-c", "kubectl get deployments"]
           restartPolicy: Never
